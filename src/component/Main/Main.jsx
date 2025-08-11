@@ -1,8 +1,19 @@
-export default function Main(){
-    return(
-        <>
-      <h2>Main Content Area</h2>
-      <p>This is where the main content wil go.</p>  
-        </>
-    );
+import { useEffect, useState } from "react";
+import mockQuestions from '../../data/mockQuestion';
+import Card from "../../common/Card";
+
+export default function Main() {
+  const [questions, setQuestion] =useState([]);
+  useEffect(() =>{
+    setQuestion(mockQuestions);
+  }, []);
+  return (
+    <>
+    {questions.map((question) =>(
+      <Card key={question.id} {...question} />
+      ))
+    }
+    </>
+  );
 }
+  
