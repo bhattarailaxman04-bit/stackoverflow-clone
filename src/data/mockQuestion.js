@@ -1,40 +1,68 @@
-const mockQuestions = 
-[
-  {
-    "id": 1,
-    "question": "What is the capital of France?",
-    "creator": "John Doe",
-    "createdDate": "2023-05-10T09:15:00",
-    "tags": ["geography", "trivia"]
-  },
-  {
-    "id": 2,
-    "question": "How does photosynthesis work?",
-    "creator": "Jane Smith",
-    "createdDate": "2023-06-22T14:30:00",
-    "tags": ["biology", "science"]
-  },
-  {
-    "id": 3,
-    "question": "What are the best programming languages?",
-    "creator": "Alex Brown",
-    "createdDate": "2023-07-05T11:45:00",
-    "tags": ["programming", "tech"]
-  },
-  {
-    "id": 4,
-    "question": "Why is the sky blue?",
-    "creator": "Emily Davis",
-    "createdDate": "2023-08-12T16:20:00",
-    "tags": ["physics", "nature"]
-  },
-  {
-    "id": 5,
-    "question": "How to learn machine learning effectively?",
-    "creator": "Mike Wilson",
-    "createdDate": "2023-09-18T10:10:00",
-    "tags": ["AI", "programming", "education"]
-  }
-];
+const  mockquestion =[
+    {
+         "id": 1,
+    "question": "What is React?",
+    "body": "React is a javaScript Library",
+    "creator": "Laxman",
+    "createdDate": "2025-05-10T09:15:00",
+    "tags": ["React"]
+     
+    },
 
-export default mockQuestions;
+
+    {
+     "id": 2,
+    "question": "What is Props?",
+    "body": "props is also known as property which allow to pass the value from parent  to the child ",
+    "creator": "Laxman",
+    "createdDate": "2025-05-10T09:15:00",
+    "tags": ["MernStack", "React"]
+
+    },
+
+    
+     {
+     "id": 3,
+    "question": "What is the difference between Class and Id?",
+    "body" : "The difference between class and id is : Id is unique and can't be reuse whereas class is not unique and can be reused.",
+    "creator": "Laxman",
+    "createdDate": "2025-05-10T09:15:00",
+    "tags":  ["MernStack", "React"]
+
+    },
+
+
+     {
+     "id": 4,
+    "question": "What do you mean by  react Hooks?",
+    "body":"React Hooks  are functions that enable the use of state and other React features within functional components, eliminating the need for class components in many scenarios",
+    "creator": "Laxman",
+    "createdDate": "2025-05-10T09:15:00",
+    "tags": ["MernStack", "React"]
+
+    },
+    
+
+    
+     {
+     "id": 5,
+    "question": "What is  JSX?",
+    "body": "Jsx is a javaScript and Xml which allows the use of javascript  and html tags inside a react  ",
+    "creator": "Laxman",
+    "createdDate": "2025-05-10T09:15:00",
+    "tags": ["MernStack", "React"]
+
+    },
+
+    
+     {
+     "id": 6,
+    "question": "what are the array methods?",
+    "body": "The array methods are Find, filter, push, pop,etc",
+    "creator":"Laxman",
+    "createdDate": "2025-05-10T09:15:00",
+    "tags": ["MernStack", "React"]
+
+    },
+] 
+export default mockquestion;
