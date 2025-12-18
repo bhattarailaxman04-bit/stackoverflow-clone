@@ -52,17 +52,17 @@ export default function Answer() {
       prev.map((ans) =>
         ans.id === answerId
           ? {
-              ...ans,
-              comments: [
-                ...ans.comments,
-                {
-                  id: Date.now(),
-                  text,
-                  creator: "You",
-                  createdDate: new Date().toISOString(),
-                },
-              ],
-            }
+            ...ans,
+            comments: [
+              ...ans.comments,
+              {
+                id: Date.now(),
+                text,
+                creator: "You",
+                createdDate: new Date().toISOString(),
+              },
+            ],
+          }
           : ans
       )
     );

@@ -1,36 +1,40 @@
-import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const { isLoggedIn, login, logout } = useAuth();
-  
   return (
-    <header className="header flex items-center justify-between px-4 py-2 shadow bg-white">
-      {/* Left: Logo and Title */}
+    <header className="flex justify-between items-center px-6 py-3 border-b shadow-sm">
+      {/* Left side - Logo */}
       <div className="flex items-center space-x-2">
         <img
-          src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.svg?v=ac8d4b7f3c0e"
-          alt="StackOverflow Logo"
-          className="h-8 w-auto"
+          src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Stack_Overflow_icon.svg"
+          alt="logo"
+          className="h-6 w-6"
         />
-        <h1 className="text-lg font-semibold">StackOverflow Clone</h1>
+        <h1 className="font-bold text-lg">StackOverflow Clone</h1>
       </div>
 
-      {/* Center: Search Bar */}
-      <div className="flex-1 mx-4">
+      {/* Center - Search bar */}
+      <div className="flex-1 mx-6">
         <input
           type="text"
           placeholder="Search..."
-          className="w-full max-w-md px-3 py-1 border rounded focus:outline-none"
+          className="border rounded p-2 w-full"
         />
       </div>
 
-      {/* Right: Auth Button */}
-      <button
-        onClick={isLoggedIn ? logout : login}
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-      >
-        {isLoggedIn ? "Logout" : "Login"}
-      </button>
+      {/* Right side - Auth buttons */}
+      <div className="flex space-x-3">
+        <Link to="/login">
+          <button className="bg-blue-500 text-white px-4 py-2 rounded">
+            Login
+          </button>
+        </Link>
+        <Link to="/register">
+          <button className="bg-green-500 text-white px-4 py-2 rounded">
+            Register
+          </button>
+        </Link>
+      </div>
     </header>
   );
 }
